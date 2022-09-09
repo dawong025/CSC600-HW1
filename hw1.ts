@@ -43,11 +43,12 @@ https://docs.google.com/document/d/1Azh7c_sMtjHApLnQ-AamZ_LRs0Gqlc_nSCPp4zSbFJM/
 ** ============================================================================ */
 
 export const HONOR_PLEDGE = "I pledge on my honor that this assignment is my own work.";
-export const SIGNATURE = "<your-full-name-here>"; // TODO: FILL ME IN
+export const SIGNATURE = "Darren Wong"; // TODO: FILL ME IN
 
 // If you used any resources, please list them here
 export const RESOURCES_CONSULTED = [
     "www.google.com", // TODO: FILL ME IN
+    "https://stackoverflow.com/questions/43963518/to-copy-the-values-from-one-dictionary-to-other-dictionary-in-javascript"
 ];
 
 
@@ -86,9 +87,22 @@ Example:
 ** ----------------------------------------------------- */
 
 export function multArray(arr: number[]): number {
-    throw Error("TODO");
+    let product = 1;
+    if(arr.length > 0){
+      for(let i = 0; i < arr.length; i++){
+        product = product * arr[i];
+      }
+      return product;
+    }
+    else{ //if array length = 0
+      return 1;
+    }
 }
 
+//Q1a Testing Code
+// console.log("Q1a. " + multArray([]));
+// console.log("Q1a. " + multArray([1, 2, 3]));
+// console.log("Q1a. " + multArray([-1, -2, 3, 10]));
 
 /* ----------------------------------------------------- **
 ### 1b. Complete the function definition below. (8 pts)
@@ -106,9 +120,25 @@ Example:
 ** ----------------------------------------------------- */
 
 export function maxArray(arr: number[]): number {
-    throw Error("TODO");
+    
+    if(arr.length > 0){
+      let max = arr[0];
+      for(let i = 0; i < arr.length; i++){
+        if(max < arr[i]){
+          max = arr[i];
+        }
+      }
+      return max;
+    }
+    else{
+      return Number.POSITIVE_INFINITY;
+    }
 }
 
+//Q1b Testing Code
+// console.log("Q1b. "+ maxArray([]));
+// console.log("Q1b. "+ maxArray([1, 2, 3]));
+// console.log("Q1b. "+ maxArray([-1, -2, 3, 10]));
 
 /* ----------------------------------------------------- **
 ### 1c. Complete the function definition below. (8 pts)
@@ -129,9 +159,19 @@ Example:
 ** ----------------------------------------------------- */
 
 export function longestWord(arr: string[]): string {
-    throw Error("TODO");
+    let longestWord = "";
+    for(let i = 0; i < arr.length; i++){
+      if(longestWord.length <= arr[i].length){
+        longestWord = arr[i];
+      }
+    }
+    return longestWord;
 }
 
+//Q1c Testing Code
+// console.log("Q1c. " + longestWord([]));
+// console.log("Q1c. " + longestWord(["hello", "world"]));
+// console.log("Q1c. " + longestWord(["csc600", "is", "fun"]));
 
 /* ----------------------------------------------------- **
 ### 1d. Complete the function definition below. (8 pts)
@@ -151,9 +191,25 @@ Example:
 ** ----------------------------------------------------- */
 
 export function shortestWord(arr: string[]): string {
-    throw Error("TODO");
+    if(arr.length <= 0){
+      let shortestWord = "";
+      return shortestWord;
+    }
+    else{
+      let shortestWord = arr[0];
+      for(let i = 0; i < arr.length; i++){
+        if(shortestWord.length > arr[i].length){
+          shortestWord = arr[i];
+        }
+      }
+      return shortestWord;
+    }
 }
 
+//Q1d Testing Code
+// console.log("Q1d. " + shortestWord([]));
+// console.log("Q1d. " + shortestWord(["hello", "world"]));
+// console.log("Q1d. " + shortestWord(["csc600", "is", "fun"]));
 
 /* ----------------------------------------------------- **
 ### 1e. Complete the function definition below. (8 pts)
@@ -177,9 +233,23 @@ Example:
 ** ----------------------------------------------------- */
 
 export function shortestAndLongestWord(arr: string[]): [string, string] {
-    throw Error("TODO");
+    if(arr.length <= 0){
+      let emptyPair: [string, string] = ["", ""];
+      return emptyPair;
+    }
+    else{
+      let shortest_word = shortestWord(arr);
+      let longest_word = longestWord(arr);
+
+      let shortLongPair: [string, string] = [shortest_word, longest_word];
+      return shortLongPair;
+    }
 }
 
+//Q1e Testing Code
+// console.log("Q1e. " + shortestAndLongestWord([]));
+// console.log("Q1e. " + shortestAndLongestWord(["hello", "world"]));
+// console.log("Q1e. " + shortestAndLongestWord(["csc600", "is", "fun"]));
 
 /* ==========================================================================  **
 ## 2. Pure Functions (30 pts)
@@ -226,9 +296,26 @@ Example:
 ** ----------------------------------------------------- */
 
 export function impureNegate(arr: number[]): void {
-    throw Error("TODO");
+    for(let i = 0; i < arr.length; i++){
+      arr[i] = arr[i] * (-1);
+    }
 }
 
+//Q2a Testing Code
+// console.log("Q2a.");
+// const arr = [1, 2, 3];
+// impureNegate(arr);
+// console.log(arr);
+
+// impureNegate(arr);
+// console.log(arr);
+
+// impureNegate(arr);
+// console.log(arr);
+
+// const arr2 = [1, 2, 3];
+// impureNegate(arr2);
+// console.log(arr2);
 
 /* ----------------------------------------------------- **
 ### 2b. Complete the function definition below. (10 pts)
@@ -263,9 +350,30 @@ Example:
 ** ----------------------------------------------------- */
 
 export function copyNumArray(arr: number[]): number[] {
-    throw Error("TODO");
+    let copyArray: number[] = [];
+    for(let i = 0; i < arr.length; i++){
+      copyArray.push(arr[i]);
+    }
+    return copyArray;
 }
 
+//Q2b Testing Code
+// console.log("Q2b.");
+// const arr3 = [1, 2, 3];
+// const arr4 = copyNumArray(arr3);
+// impureNegate(arr3);
+// console.log(arr3);
+
+// console.log(arr4);
+// --------------------------------------------
+// const arr5 = [1, 2, 3, 4];
+// console.log(impureNegate(copyNumArray(arr5)));
+
+// const arr6 = copyNumArray(arr5);
+// impureNegate(arr6);
+// console.log(arr6);
+
+// console.log(arr5);
 
 /* ----------------------------------------------------- **
 ### 2c. Complete the function definition below. (10 pts)
@@ -288,9 +396,20 @@ Example:
 ** ----------------------------------------------------- */
 
 export function pureNegate(arr: number[]): number[] {
-    throw Error("TODO");
+    let copyArray: number[] = [];
+    for(let i = 0; i < arr.length; i++){
+      copyArray.push(arr[i] * (-1));
+    }
+    return copyArray;
 }
 
+//Q2c Testing Code
+// console.log("Q2c.");
+// const arr7 = [1, 2, 3];
+// console.log(pureNegate(arr7));
+// console.log(arr7);
+// console.log(pureNegate(arr7));
+// console.log(arr7);
 
 /* ==========================================================================  **
 ## 3. Other TypeScript Features (30 pts)
@@ -324,9 +443,25 @@ Example:
 ** ----------------------------------------------------- */
 
 export function copyArray<T>(arr: T[]): T[] {
-    throw Error("TODO");
+  let copyArray: T[] = [];
+  for(let i = 0; i < arr.length; i++){
+    copyArray.push(arr[i]);
+  }
+  return copyArray;
 }
 
+//Q3a Testing Code
+// console.log("Q3a.")
+// const arr8 = ["csc600", "is", "fun"];
+// const arr9 = copyArray(arr8);
+// arr8[0] = "life";
+// console.log(arr9);
+
+// -----------------
+// const arr10 = [1, 2, 3, 4];
+// const arr11 = copyArray(arr10);
+// arr10[0] = -1;
+// console.log(arr11);
 
 /* ----------------------------------------------------- **
 ### 3b. Complete the function definition below. (10 pts)
@@ -354,9 +489,23 @@ for (const [key, val] of Object.entries(dict)) {
 ** ----------------------------------------------------- */
 
 export function copyDictionary(dict: {[key: string]: number}): {[key: string]: number} {
-    throw Error("TODO");
+    let copyDict: {[key: string]: number} = {};
+    for (const key in dict) {
+      //console.log(key, value);]
+      copyDict[key] = dict[key];
+    }
+    return copyDict;
 }
 
+//Q3b Testing Code
+// console.log("Q3b.");
+// const dict = {
+//   "hello": 1,
+//   "world": 2
+// };
+// const dict2 = copyDictionary(dict);
+// dict["hello"] = -1;
+// console.log(dict2);
 
 /* ----------------------------------------------------- **
 ### 3c. Complete the function definition below. (10 pts)
@@ -388,8 +537,30 @@ type tsRecord = {
 }
 
 export function copyTsRecord(tsRec: tsRecord): tsRecord {
-    throw Error("TODO");
+  const copyTs = {
+    myStr: tsRec.myStr,
+    myNum: tsRec.myNum,
+    myDict: copyDictionary(tsRec.myDict)
+  };
+
+  return copyTs;
 }
+
+//Q3c Testing Code
+// console.log("Q3c.");
+
+// const rec = {
+//   myStr: "hello",
+//   myNum: 42,
+//   myDict: {
+//       "csc600": -1,
+//       "is": -2,
+//       "fun": 3
+//   }
+// };
+// const rec2 = copyTsRecord(rec);
+// rec.myStr = "foobar";
+// console.log(rec2);
 
 
 /* ==========================================================================  **
@@ -406,7 +577,21 @@ type genericTsRecord<T> = {
     myNum: number,
     myDict: {[key: string]: T}
 }
-
+//Helper function to copy dictionary
+export function copyDictionaryGeneric<T>(dict: {[key: string]: T}): {[key: string]: T} {
+  let copyDict: {[key: string]: T} = {};
+  for (const key in dict) {
+    //console.log(key, value);]
+    copyDict[key] = dict[key];
+  }
+  return copyDict;
+}
 export function copyGenericTsRecord<T>(tsRec: genericTsRecord<T>): genericTsRecord<T> {
-    throw Error("BONUS TODO");
+  const copyTs = {
+    myStr: tsRec.myStr,
+    myNum: tsRec.myNum,
+    myDict: copyDictionaryGeneric(tsRec.myDict)
+  };
+
+  return copyTs;
 }
