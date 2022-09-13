@@ -1,0 +1,417 @@
+Problem 1a:
+    input: []
+    expected: 1
+    actual: 1
+    input: [1,2,3]
+    expected: 6
+    actual: 6
+    input: [-1,-2,3,10]
+    expected: 60
+    actual: 60
+    input: [null,null]
+    expected: Infinity
+    actual: Infinity
+    input: [-100,100,1000,-1000]
+    expected: 10000000000
+    actual: 10000000000
+    input: [null,null]
+    expected: -Infinity
+    actual: -Infinity
+    input: [-1,-2,-3,-4,5]
+    expected: 120
+    actual: 120
+    input: [0,0]
+    expected: 0
+    actual: 0
+    input: [null]
+    expected: -Infinity
+    actual: -Infinity
+    input: [1000,-1]
+    expected: -1000
+    actual: -1000
+    Points for problem: 8 out of 8
+
+Problem 1b:
+    input: []
+    expected: Infinity
+    actual: Infinity
+    input: [1,2,3]
+    expected: 3
+    actual: 3
+    input: [-1,-2,3,10]
+    expected: 10
+    actual: 10
+    input: [0,0,0,0,0,0]
+    expected: 0
+    actual: 0
+    input: [null]
+    expected: -Infinity
+    actual: -Infinity
+    input: [null]
+    expected: Infinity
+    actual: Infinity
+    input: [100,100,-0.11,0.11]
+    expected: 100
+    actual: 100
+    input: [-1,2,-3,4,-5,6]
+    expected: 6
+    actual: 6
+    input: [8,2,-3,4,-5,6]
+    expected: 8
+    actual: 8
+    input: [0,0,0,0,0,null,0,0,0,0,0]
+    expected: Infinity
+    actual: Infinity
+    Points for problem: 8 out of 8
+
+Problem 1c:
+    input: []
+    expected: 
+    actual: 
+    input: ["hello","world"]
+    expected: world
+    actual: world
+    input: ["csc600","is","fun"]
+    expected: csc600
+    actual: csc600
+    input: ["csc600"]
+    expected: csc600
+    actual: csc600
+    input: ["","a","ab","abc"]
+    expected: abc
+    actual: abc
+    input: ["abc","abcd","abcde","abcde"]
+    expected: abcde
+    actual: abcde
+    input: ["abcde","a","a","bcdea"]
+    expected: bcdea
+    actual: bcdea
+    input: ["12345","1234567890","54321"]
+    expected: 1234567890
+    actual: 1234567890
+    input: ["",""]
+    expected: 
+    actual: 
+    input: ["12345","12345","abcde"]
+    expected: abcde
+    actual: abcde
+    Points for problem: 8 out of 8
+
+Problem 1d:
+    input: []
+    expected: 
+    actual: 
+    input: ["hello","world"]
+    expected: hello
+    actual: hello
+    input: ["csc600","is","fun"]
+    expected: is
+    actual: is
+    input: ["csc600"]
+    expected: csc600
+    actual: csc600
+    input: ["","a","ab","abc"]
+    expected: 
+    actual: 
+    input: ["abc","abcd","abcde","abcde"]
+    expected: abc
+    actual: abc
+    input: ["abcde","a","a","bcdea"]
+    expected: a
+    actual: a
+    input: ["12345","1234567890","54321"]
+    expected: 12345
+    actual: 12345
+    input: ["",""]
+    expected: 
+    actual: 
+    input: ["12345","12345","abcde"]
+    expected: 12345
+    actual: 12345
+    Points for problem: 8 out of 8
+
+Problem 1e:
+    input: []
+    expected: ,
+    actual: ,
+    input: ["hello","world"]
+    expected: hello,world
+    actual: hello,world
+    input: ["csc600","is","fun"]
+    expected: is,csc600
+    actual: is,csc600
+    input: ["csc600"]
+    expected: csc600,csc600
+    actual: csc600,csc600
+    input: ["","a","ab","abc"]
+    expected: ,abc
+    actual: ,abc
+    input: ["abc","abcd","abcde","abcde"]
+    expected: abc,abcde
+    actual: abc,abcde
+    input: ["abcde","a","a","bcdea"]
+    expected: a,bcdea
+    actual: a,bcdea
+    input: ["12345","1234567890","54321"]
+    expected: 12345,1234567890
+    actual: 12345,1234567890
+    input: ["",""]
+    expected: ,
+    actual: ,
+    input: ["12345","12345","abcde"]
+    expected: 12345,abcde
+    actual: 12345,abcde
+    Points for problem: 8 out of 8
+
+Problem 2a:
+    input: []
+    input after: []
+    expected input after: []
+    expected output: undefined
+    actual output: undefined
+    input: [1,2,3]
+    input after: [-1,-2,-3]
+    expected input after: [-1,-2,-3]
+    expected output: undefined
+    actual output: undefined
+    input: [2,3,4]
+    input after: [-2,-3,-4]
+    expected input after: [-2,-3,-4]
+    expected output: undefined
+    actual output: undefined
+    input: [3,4,5]
+    input after: [-3,-4,-5]
+    expected input after: [-3,-4,-5]
+    expected output: undefined
+    actual output: undefined
+    input: [-10,0,10]
+    input after: [10,0,-10]
+    expected input after: [10,0,-10]
+    expected output: undefined
+    actual output: undefined
+    input: [1000,-10,-9,-8,8,9,10,-1000]
+    input after: [-1000,10,9,8,-8,-9,-10,1000]
+    expected input after: [-1000,10,9,8,-8,-9,-10,1000]
+    expected output: undefined
+    actual output: undefined
+    input: [1,2,3,4,5,6,7,8,9,10]
+    input after: [-1,-2,-3,-4,-5,-6,-7,-8,-9,-10]
+    expected input after: [-1,-2,-3,-4,-5,-6,-7,-8,-9,-10]
+    expected output: undefined
+    actual output: undefined
+    input: [0,0,0,0,0,0,0,0]
+    input after: [0,0,0,0,0,0,0,0]
+    expected input after: [0,0,0,0,0,0,0,0]
+    expected output: undefined
+    actual output: undefined
+    input: [null,null]
+    input after: [null,null]
+    expected input after: [null,null]
+    expected output: undefined
+    actual output: undefined
+    input: [null,null]
+    input after: [null,null]
+    expected input after: [null,null]
+    expected output: undefined
+    actual output: undefined
+    Points for problem: 10 out of 10
+
+Problem 2b:
+    input: []
+    expected: []
+    actual: []
+    input: [1,2,3]
+    expected: [1,2,3]
+    actual: [1,2,3]
+    input: [2,3,4]
+    expected: [2,3,4]
+    actual: [2,3,4]
+    input: [3,4,5]
+    expected: [3,4,5]
+    actual: [3,4,5]
+    input: [-10,0,10]
+    expected: [-10,0,10]
+    actual: [-10,0,10]
+    input: [1000,-10,-9,-8,8,9,10,-1000]
+    expected: [1000,-10,-9,-8,8,9,10,-1000]
+    actual: [1000,-10,-9,-8,8,9,10,-1000]
+    input: [1,2,3,4,5,6,7,8,9,10]
+    expected: [1,2,3,4,5,6,7,8,9,10]
+    actual: [1,2,3,4,5,6,7,8,9,10]
+    input: [0,0,0,0,0,0,0,0]
+    expected: [0,0,0,0,0,0,0,0]
+    actual: [0,0,0,0,0,0,0,0]
+    input: [null,null]
+    expected: [null,null]
+    actual: [null,null]
+    input: [null,null]
+    expected: [null,null]
+    actual: [null,null]
+    Points for problem: 10 out of 10
+
+Problem 2c:
+    input: []
+    expected: []
+    actual: []
+    input: [1,2,3]
+    expected: [-1,-2,-3]
+    actual: [-1,-2,-3]
+    input: [2,3,4]
+    expected: [-2,-3,-4]
+    actual: [-2,-3,-4]
+    input: [3,4,5]
+    expected: [-3,-4,-5]
+    actual: [-3,-4,-5]
+    input: [-10,0,10]
+    expected: [10,0,-10]
+    actual: [10,0,-10]
+    input: [1000,-10,-9,-8,8,9,10,-1000]
+    expected: [-1000,10,9,8,-8,-9,-10,1000]
+    actual: [-1000,10,9,8,-8,-9,-10,1000]
+    input: [1,2,3,4,5,6,7,8,9,10]
+    expected: [-1,-2,-3,-4,-5,-6,-7,-8,-9,-10]
+    actual: [-1,-2,-3,-4,-5,-6,-7,-8,-9,-10]
+    input: [0,0,0,0,0,0,0,0]
+    expected: [0,0,0,0,0,0,0,0]
+    actual: [0,0,0,0,0,0,0,0]
+    input: [null,null]
+    expected: [null,null]
+    actual: [null,null]
+    input: [null,null]
+    expected: [null,null]
+    actual: [null,null]
+    Points for problem: 10 out of 10
+
+Problem 3a:
+    input: []
+    expected: []
+    actual: []
+    input: ["hello","world"]
+    expected: ["hello","world"]
+    actual: ["hello","world"]
+    input: [0,1,2,3,4,5]
+    expected: [0,1,2,3,4,5]
+    actual: [0,1,2,3,4,5]
+    input: [0]
+    expected: [0]
+    actual: [0]
+    input: [true,false,false,true]
+    expected: [true,false,false,true]
+    actual: [true,false,false,true]
+    input: [0,0,0,0,0,0]
+    expected: [0,0,0,0,0,0]
+    actual: [0,0,0,0,0,0]
+    input: ["a","b","c","d","e"]
+    expected: ["a","b","c","d","e"]
+    actual: ["a","b","c","d","e"]
+    input: ["a",1,"c",2,"3"]
+    expected: ["a",1,"c",2,"3"]
+    actual: ["a",1,"c",2,"3"]
+    input: [null,null]
+    expected: [null,null]
+    actual: [null,null]
+    input: [null,null]
+    expected: [null,null]
+    actual: [null,null]
+    Points for problem: 10 out of 10
+
+Problem 3b:
+    input: {"hello":1,"world":2}
+    expected: {"hello":1,"world":2}
+    actual: {"hello":1,"world":2}
+    input: {}
+    expected: {}
+    actual: {}
+    input: {"one":1,"two":2,"three":3,"four":4,"five":5}
+    expected: {"one":1,"two":2,"three":3,"four":4,"five":5}
+    actual: {"one":1,"two":2,"three":3,"four":4,"five":5}
+    input: {"age":100,"power":10,"complete":42,"incomplete":17}
+    expected: {"age":100,"power":10,"complete":42,"incomplete":17}
+    actual: {"age":100,"power":10,"complete":42,"incomplete":17}
+    input: {"once":1,"twice":2,"thrice":3}
+    expected: {"once":1,"twice":2,"thrice":3}
+    actual: {"once":1,"twice":2,"thrice":3}
+    input: {"once":1,"twice":2,"thrice":[1,2,3]}
+    expected: {"once":1,"twice":2,"thrice":[1,2,3]}
+    actual: {"once":1,"twice":2,"thrice":[1,2,3]}
+    input: {"once":[-1,-2,-3],"twice":[2,3,4],"thrice":[1,2,3]}
+    expected: {"once":[-1,-2,-3],"twice":[2,3,4],"thrice":[1,2,3]}
+    actual: {"once":[-1,-2,-3],"twice":[2,3,4],"thrice":[1,2,3]}
+    input: {"once":[0,0,0,0,0,0],"twice":[0,0,0,0,0]}
+    expected: {"once":[0,0,0,0,0,0],"twice":[0,0,0,0,0]}
+    actual: {"once":[0,0,0,0,0,0],"twice":[0,0,0,0,0]}
+    input: {"once":[null],"twice":[null]}
+    expected: {"once":[null],"twice":[null]}
+    actual: {"once":[null],"twice":[null]}
+    input: {"once":[null],"twice":[null]}
+    expected: {"once":[null],"twice":[null]}
+    actual: {"once":[null],"twice":[null]}
+    Points for problem: 10 out of 10
+
+Problem 3c:
+    input: {"myStr":"hello","myNum":42,"myDict":{"csc600":-1,"is":-2,"fun":3}}
+    expected: {"myStr":"hello","myNum":42,"myDict":{"csc600":-1,"is":-2,"fun":3}}
+    actual: {"myStr":"hello","myNum":42,"myDict":{"csc600":-1,"is":-2,"fun":3}}
+    input: {"myStr":"Joe","myNum":17,"myDict":{"Yes":0,"No":1,"Maybe":2}}
+    expected: {"myStr":"Joe","myNum":17,"myDict":{"Yes":0,"No":1,"Maybe":2}}
+    actual: {"myStr":"Joe","myNum":17,"myDict":{"Yes":0,"No":1,"Maybe":2}}
+    input: {"myStr":"Rigby","myNum":0,"myDict":{"Chairs":1,"Baby Ducks":2,"Ham":3}}
+    expected: {"myStr":"Rigby","myNum":0,"myDict":{"Chairs":1,"Baby Ducks":2,"Ham":3}}
+    actual: {"myStr":"Rigby","myNum":0,"myDict":{"Chairs":1,"Baby Ducks":2,"Ham":3}}
+    input: {"myStr":"Benson","myNum":90,"myDict":{"Misc":240,"Video Games":5,"Hot Dogs":30}}
+    expected: {"myStr":"Benson","myNum":90,"myDict":{"Misc":240,"Video Games":5,"Hot Dogs":30}}
+    actual: {"myStr":"Benson","myNum":90,"myDict":{"Misc":240,"Video Games":5,"Hot Dogs":30}}
+    input: {"myStr":"Skips","myNum":4003,"myDict":{"Age":250,"Power":10,"Hearing":1}}
+    expected: {"myStr":"Skips","myNum":4003,"myDict":{"Age":250,"Power":10,"Hearing":1}}
+    actual: {"myStr":"Skips","myNum":4003,"myDict":{"Age":250,"Power":10,"Hearing":1}}
+    input: {"myStr":"Skips","myNum":-100,"myDict":{"Age":-250,"Power":-10,"Hearing":-1}}
+    expected: {"myStr":"Skips","myNum":-100,"myDict":{"Age":-250,"Power":-10,"Hearing":-1}}
+    actual: {"myStr":"Skips","myNum":-100,"myDict":{"Age":-250,"Power":-10,"Hearing":-1}}
+    input: {"myStr":"","myNum":1000,"myDict":{"Age":250,"Power":-10,"Hearing":-1}}
+    expected: {"myStr":"","myNum":1000,"myDict":{"Age":250,"Power":-10,"Hearing":-1}}
+    actual: {"myStr":"","myNum":1000,"myDict":{"Age":250,"Power":-10,"Hearing":-1}}
+    input: {"myStr":"","myNum":-10000,"myDict":{"Age":0,"Power":0,"Hearing":0}}
+    expected: {"myStr":"","myNum":-10000,"myDict":{"Age":0,"Power":0,"Hearing":0}}
+    actual: {"myStr":"","myNum":-10000,"myDict":{"Age":0,"Power":0,"Hearing":0}}
+    input: {"myStr":"","myNum":null,"myDict":{"Age":null,"Power":null,"Hearing":null}}
+    expected: {"myStr":"","myNum":null,"myDict":{"Age":null,"Power":null,"Hearing":null}}
+    actual: {"myStr":"","myNum":null,"myDict":{"Age":null,"Power":null,"Hearing":null}}
+    input: {"myStr":"","myNum":null,"myDict":{"Age":null,"Power":null,"Hearing":null}}
+    expected: {"myStr":"","myNum":null,"myDict":{"Age":null,"Power":null,"Hearing":null}}
+    actual: {"myStr":"","myNum":null,"myDict":{"Age":null,"Power":null,"Hearing":null}}
+    Points for problem: 10 out of 10
+
+Bonus:
+    input: {"myStr":"hello","myNum":42,"myDict":{"csc600":"negative-one","is":"negative-thirty","fun":"negative-one-hundred"}}
+    expected: {"myStr":"hello","myNum":42,"myDict":{"csc600":"negative-one","is":"negative-thirty","fun":"negative-one-hundred"}}
+    actual: {"myStr":"hello","myNum":42,"myDict":{"csc600":"negative-one","is":"negative-thirty","fun":"negative-one-hundred"}}
+    input: {"myStr":"Joe","myNum":17,"myDict":{"Yes":true,"No":false,"Maybe":true}}
+    expected: {"myStr":"Joe","myNum":17,"myDict":{"Yes":true,"No":false,"Maybe":true}}
+    actual: {"myStr":"Joe","myNum":17,"myDict":{"Yes":true,"No":false,"Maybe":true}}
+    input: {"myStr":"Rigby","myNum":0,"myDict":{"Chairs":1,"Baby Ducks":2,"Ham":3}}
+    expected: {"myStr":"Rigby","myNum":0,"myDict":{"Chairs":1,"Baby Ducks":2,"Ham":3}}
+    actual: {"myStr":"Rigby","myNum":0,"myDict":{"Chairs":1,"Baby Ducks":2,"Ham":3}}
+    input: {"myStr":"Mordecai","myNum":37,"myDict":{"Chairs":"Send","Baby Ducks":"Recieve","Ham":"Bones"}}
+    expected: {"myStr":"Mordecai","myNum":37,"myDict":{"Chairs":"Send","Baby Ducks":"Recieve","Ham":"Bones"}}
+    actual: {"myStr":"Mordecai","myNum":37,"myDict":{"Chairs":"Send","Baby Ducks":"Recieve","Ham":"Bones"}}
+    input: {"myStr":"Jose","myNum":100,"myDict":{"Chairs":1,"Baby Ducks":"Animal","Ham":true}}
+    expected: {"myStr":"Jose","myNum":100,"myDict":{"Chairs":1,"Baby Ducks":"Animal","Ham":true}}
+    actual: {"myStr":"Jose","myNum":100,"myDict":{"Chairs":1,"Baby Ducks":"Animal","Ham":true}}
+    input: {"myStr":"","myNum":0,"myDict":{"Chairs":0,"Baby Ducks":"","Ham":0}}
+    expected: {"myStr":"","myNum":0,"myDict":{"Chairs":0,"Baby Ducks":"","Ham":0}}
+    actual: {"myStr":"","myNum":0,"myDict":{"Chairs":0,"Baby Ducks":"","Ham":0}}
+    input: {"myStr":"Test","myNum":100000,"myDict":{"Chairs":10000,"Baby Ducks":"Test","Ham":10000}}
+    expected: {"myStr":"Test","myNum":100000,"myDict":{"Chairs":10000,"Baby Ducks":"Test","Ham":10000}}
+    actual: {"myStr":"Test","myNum":100000,"myDict":{"Chairs":10000,"Baby Ducks":"Test","Ham":10000}}
+    input: {"myStr":"","myNum":100000,"myDict":{"Chairs":-100000,"Baby Ducks":"Test","Ham":-10000}}
+    expected: {"myStr":"","myNum":100000,"myDict":{"Chairs":-100000,"Baby Ducks":"Test","Ham":-10000}}
+    actual: {"myStr":"","myNum":100000,"myDict":{"Chairs":-100000,"Baby Ducks":"Test","Ham":-10000}}
+    input: {"myStr":"       ","myNum":null,"myDict":{"Chairs":-100000,"Baby Ducks":"Test","Ham":null}}
+    expected: {"myStr":"       ","myNum":null,"myDict":{"Chairs":-100000,"Baby Ducks":"Test","Ham":null}}
+    actual: {"myStr":"       ","myNum":null,"myDict":{"Chairs":-100000,"Baby Ducks":"Test","Ham":null}}
+    input: {"myStr":"       ","myNum":null,"myDict":{"Chairs":-100000,"Baby Ducks":"Test","Ham":null}}
+    expected: {"myStr":"       ","myNum":null,"myDict":{"Chairs":-100000,"Baby Ducks":"Test","Ham":null}}
+    actual: {"myStr":"       ","myNum":null,"myDict":{"Chairs":-100000,"Baby Ducks":"Test","Ham":null}}
+    Points for problem: 10 out of 10
+
+Total score: 110 of 100, or 110%
